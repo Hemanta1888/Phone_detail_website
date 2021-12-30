@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Of phone page</title>
+</head>
+<body>
+    <h1 style="color: rgb(19, 236, 30); text-align:center;"><u>About Phones</u></h1>
+    {% for data in PhoneList %}
+        <h3 style="color: rgb(49, 238, 175);">
+            <a href="phonedetail/{{data.id}}" style="text-decoration: none;">
+                {{forloop.counter}}. {{data.Pname}}
+            </a></h3>
+        <!-- <h5>Origin: {{data.Porigin}}</h5>
+        <h5>Year: {{data.Pyear}}</h5>
+        <h5>About: {{data.Pabout}}</h5><hr> -->
+    {% endfor %}
+</body>
+</html>

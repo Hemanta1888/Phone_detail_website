@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone List View</title>
+</head>
+<body>
+    <h1 style="text-decoration: underline; text-align:center">Phone Details</h1>
+    {% for PhoneModel in phonemodel_list %}
+        <h4>No: {{forloop.counter}}</h4>
+        <h3 style="color: rgb(13, 245, 13);"><a href="" style="text-decoration: none;">{{PhoneModel.Pname}}</a></h3>
+        <h4>Phone Origin: {{PhoneModel.Porigin}}</h4>
+        <h4>Phone started Year: {{PhoneModel.Pyear}}</h4>
+        <h4>About Phone: {{PhoneModel.Pabout}}</h4><hr>
+    {% endfor %}
+</body>
+</html>

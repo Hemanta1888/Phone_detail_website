@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Model Page</title>
+</head>
+<body>
+    <h1 style="text-align: center;color:rgb(233, 135, 15)"><u>Phone data Details</u></h1>
+    <h3>Phone Name: {{Phones.Pname}}</h3>
+    <h4>Phone Origin: {{Phones.Porigin}}</h4>
+    <h4>Phone Started Year: {{Phones.Pyear}}</h4>
+    <h4>About Phone: {{Phones.Pabout}}</h4><hr><hr>
+
+    <h2 style="color: rgb(7, 56, 40);"><u>All Model Details</u></h2>
+    {% for data in Phones.model.all %}
+        <h4>{{forloop.counter}}.  Model Name: {{data.mname}}</h4>
+        <h4>Original Phone: {{data.phonemodel}}</h4>
+        <h4>Model Price: {{data.mprice}}</h4>
+        <h4>ABout Model: {{data.mabout}}</h4><hr>
+    {% endfor %}
+</body>
+</html>
